@@ -1129,7 +1129,6 @@ margin-right: 24px !important;
     gap: 24px;
 }
 .profile-title-content{
-    font-size: var(--h1-size);
     font-family: 'Poppins';
 }
 .profile-item-description::after {

@@ -1103,7 +1103,6 @@ margin-right: 24px !important;
     cursor: pointer;
 }
 .profile-item-description{
-    font-size: var(--h2-size);
     font-family: 'Poppins';
 }
 .profile-body{

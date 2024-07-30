@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Reveal on Scroll</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .grid-item {
+            flex: 1 1 calc(33.333% - 20px);
+            background-color: #f2f2f2;
+            padding: 10px;
+            border-radius: 5px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        .reveal {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <!-- Repeat this block for 18 images -->
+        <div class="grid-item"><img src="https://via.placeholder.com/300x200" alt="Image 1"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x400" alt="Image 2"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x250" alt="Image 3"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x300" alt="Image 4"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x350" alt="Image 5"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x280" alt="Image 6"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x320" alt="Image 7"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x150" alt="Image 8"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x370" alt="Image 9"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x220" alt="Image 10"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x410" alt="Image 11"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x270" alt="Image 12"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x300" alt="Image 13"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x340" alt="Image 14"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x380" alt="Image 15"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x360" alt="Image 16"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x180" alt="Image 17"></div>
+        <div class="grid-item"><img src="https://via.placeholder.com/300x400" alt="Image 18"></div>
+    </div>
+
+    <script>
+ScrollReveal().reveal('grid-item', { delay: 250 });
+ScrollReveal().reveal('grid-item', { duration: 500 });
+ScrollReveal().reveal('grid-item', { delay: 375, reset: true });
+
+// Is the same as...
+
+ScrollReveal().reveal('grid-item', {
+    delay: 375,
+    duration: 500,
+    reset: true
+});
+    </script>
+</body>
+</html>
